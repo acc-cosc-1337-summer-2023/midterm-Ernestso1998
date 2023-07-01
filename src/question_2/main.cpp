@@ -12,8 +12,9 @@ int main()
 
     std::string str;
     char input;
+    bool check = true;
     
-    while(true){
+    while(check){
         std::cout<<"Please enter a word to check if palindrome: ";
         std::cin>> str;
          
@@ -29,10 +30,12 @@ int main()
         std::cin>> input;
         
         if(input == 'Y'|| input =='y'){
-        return true;
-        }else if(input =='N'||input =='n'){
-        return false;
-    }
+            check = true;
+        }
+        else if(input =='N'||input =='n'){
+            check = false;
+            continue;
+        }
     }
 
 
